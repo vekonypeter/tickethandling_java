@@ -1,0 +1,44 @@
+apply plugin: 'eclipse'
+apply plugin: 'ear'
+
+ext {
+	log4jVersion = '1.2.17'
+	testngVersion = '6.9.+'
+	jeeVersion = '6.0'  
+	servletapiVersion = '3.0.1'
+	hibernateVersion = '4.3.10.Final'
+	jaxrsVersion = '2.0.1'
+	resteasyVersion = '2.3.7.Final'
+	jstlVersion = '1.2'
+    postgresqlVersion = '9.4+'
+	jbossjee6Version = '3.0.3.Final'  
+	commonsloggingVersion = '1.2'
+	jbossjmsclientVersion = '7.2.0.Final'
+}
+
+allprojects {
+	repositories { 
+		mavenCentral() 
+		maven { url "http://repository.pentaho.org/artifactory/repo" }
+		maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/" }
+	}	
+}
+
+subprojects {
+	apply plugin: 'eclipse'
+	apply plugin: 'java'
+
+	dependencies {
+		compile group: 'log4j', name: 'log4j', version: log4jVersion
+	}
+}
+
+dependencies {
+	deploy project('th-persistence')
+	deploy project('th-ejbservice')
+	deploy project(path: 'th-weblayer', configuration: 'archives')
+	deploy project(path: 'th-webservice', configuration: 'archives')
+	earlib ( project('th-ejbserviceclient') ) {
+		transitive = false
+	}
+}

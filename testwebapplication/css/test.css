@@ -1,0 +1,26 @@
+body {
+	font-family: "Arial", Verdana, Sans-Serif;
+}
+         
+         table {
+             width: 100%;
+         }
+
+#status {
+	color: red;
+             font-size: 1.2em;
+             font-weight: bold;
+             background-color: yellow;
+}
+
+#ticketContainer>li {
+	cursor: pointer;
+}
+
+#ticketContainer>li:HOVER {
+	color: red;
+}
+
+td > input {
+	width: 100%;
+}

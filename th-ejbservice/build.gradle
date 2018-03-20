@@ -1,0 +1,7 @@
+jar { archiveName 'th-ejbservice.jar' }
+
+dependencies {
+	compile group: 'javax', name: 'javaee-api', version: jeeVersion
+	compile project(':th-ejbserviceclient')
+	compile project(':th-persistence')
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/test.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/test.css" />
+		
+	</head>
+	<body>
+        <table border="1" style="text-align: left;">        
+              <tr>
+                <th colspan="2" align="center"><h1>REST TEST WEBAPPLICATION</h1></th>
+              </tr>
+              <tr>
+                <td colspan="2" id="status">Creating new ticket</td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                	<a href="index.html" style="color: green; text-decoration: none;"><strong>&lt;&lt;&nbsp;BACK</strong></a>
+                </td>
+              </tr>
+              <tr>
+                <th style="width: 20%;">Priority:</th>
+                <td style="width: 80%;">
+	                <select id="prio" name="prio">
+		                <option value="VERY_LOW">Very low</option>
+		                <option value="LOW">Low</option>
+		                <option value="NORMAL">Normal</option>
+		                <option value="MEDIUM">Medium</option>
+		                <option value="HIGH">High</option>
+		                <option value="IMMEDIATE">Immediate</option>
+	                </select>
+	            </td>
+              </tr>
+              <tr>
+                <th>Sender name:</th>
+                <td><input type="text" id="sender" name="sender" /></td>
+              </tr>
+              <tr>
+                <th>Business impact:</th>
+                <td><input type="text" id="impact" name="impact" /></td>
+              </tr>
+              <tr>
+                <th>Steps to reproduce the issue:</th>
+                <td><input type="text" id="steps" name="steps" /></td>
+              </tr>
+               <tr>
+                <th>Issue description:</th>
+                <td><input type="text" id="desc" name="desc" /></td>
+              </tr>
+              <tr>
+              	<td colspan="2">
+                	<button onclick="createTicket()">Create</button>
+                </td>
+              </tr>
+        </table>	
+	</body>
+</html>

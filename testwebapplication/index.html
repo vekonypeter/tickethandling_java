@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/test.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/test.css" />
+		
+		<script>
+			$(document).ready(function(){
+				$("#sysId").html($("#sysId").html() + SYSTEMID);
+				getMyTickets();
+			});
+		</script>
+
+	</head>
+	<body>
+        <table border="1">        
+              <tr>
+                <th colspan="2"><h1>REST TEST WEBAPPLICATION</h1></th>
+              </tr>
+              <tr>
+                <td colspan="2" id="status">Loading your tickets...</td>
+              </tr>
+              <tr>
+                <td><h4 id="sysId">Your system id is: </h4></td>
+                <td style="width: 30%;"><h3 id="tic-det-id">Click a ticket ID to see details!</h3></td>
+              </tr>
+              <tr>
+                <td><a href="create.html" style="color: green; text-decoration: none;"><strong>CREATE</strong></a></td>
+                <td style="width: 70%;"><div id="tic-det-del" style="color: red; cursor: pointer;"><strong>DELETE</strong></div></td>
+              </tr>
+              <tr>
+               <td rowspan="8" style="text-align: left; vertical-align: top;"><strong>Your tickets:</strong><ul id="ticketContainer"></ul></td>
+              </tr>
+              <tr>
+                <td><strong>Priority: </strong><div id="tic-det-prio"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Status: </strong><div id="tic-det-status"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Processor: </strong><div id="tic-det-proc"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Last changed: </strong><div id="tic-det-last"></div></td>
+              </tr>
+              <tr>
+                <td><strong>Created on: </strong><div id="tic-det-created"></div></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="message" name="message" /><button onclick="sendMessage()">Send new</button><br /></td>
+              </tr>
+              <tr>
+                <td><strong>Messages:</strong><br /><br /><div id="tic-det-msgs"></div></td>
+              </tr>
+        </table>	
+	</body>
+</html>

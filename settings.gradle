@@ -1,0 +1,7 @@
+include 'th-ejbservice'
+include 'th-weblayer'
+include 'th-webservice'
+include 'th-persistence'
+include 'th-ejbserviceclient'
+include 'th-client'
+include 'th-jmsclient'

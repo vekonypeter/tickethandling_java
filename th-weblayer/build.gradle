@@ -1,0 +1,9 @@
+apply plugin: 'war'
+
+war { archiveName 'th-weblayer.war' }
+
+dependencies {
+	providedCompile project(':th-ejbservice')
+	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: servletapiVersion
+	providedCompile group: 'jstl', name: 'jstl', version: jstlVersion
+}
